@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Practice29_clone_book {
+    
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Stu stu = new Stu();
+        stu.name = "Tom";
+        Stu stu1;
+        stu1 = stu;
+        System.out.println(stu==stu1);
+        stu1.name = "LiMing";
+        System.out.println("stu:"+stu.name+" stu1:"+stu1.name);
+        stu1 = (Stu) stu.clone();
+        System.out.println(stu==stu1);
+        stu1.name = "Tom";
+        System.out.println("stu:"+stu.name+" stu1:"+stu1.name);
+    }
+
+}
+class Stu implements Cloneable{
+    String name;
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        // TODO Auto-generated method stub
+        return super.clone();
+    }
+    
+}
