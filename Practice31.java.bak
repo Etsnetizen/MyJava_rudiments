@@ -1,0 +1,23 @@
+public class Practice31
+{
+	public static void main(String[] args) 
+	{
+		Integer in1 = new Integer("2345");
+		double in1_dou = in1.doubleValue();
+		//新建数据类型对象后，用xxxValue转换为double类型
+		String in1_str = in1.toString();
+		//toString()转换为字符串
+		System.out.println(in1_dou);
+		System.out.println(in1_str);
+		String st1 = new String("4567");
+		Integer st1_int = Integer.valueOf("4567");
+		//以st1创建一个Integer实例
+		double st1_int_dou = st1_int.doubleValue();
+		System.out.println(st1_int_dou);
+		String st3  = new String("999");
+		double st3_dou = Double.parseDouble("999");
+		System.out.println(st3_dou);
+		int in11 = Integer.parseInt("09999");
+		System.out.println(in11.doubleValue());
+		}
+}

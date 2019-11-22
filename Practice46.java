@@ -1,0 +1,16 @@
+//从命令行读写参数
+import java.util.*;
+public class Practice46
+{
+	public static void main(String[] args) 
+	{
+		for(int i =0;i<args.length;i++){
+			System.out.println("args[" + i + "]=" + args[i]);
+		}
+		LinkedList<Object> t1 = new LinkedList<Object>();
+		t1.add("1");
+		t1.add("2");
+		t1.addFirst(0);
+		System.out.println((String)t1.getLast());
+	}
+}

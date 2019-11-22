@@ -1,0 +1,11 @@
+public class Practice30
+{
+	public static void main(String[] argv){
+	Practice30 t1 = new Practice30();
+	System.out.println(t1.getClass());
+	//¥Ú”°class Practice30
+	Class p1 = t1.getClass();
+	System.out.println(p1.toString());//¥Ú”°class Practice30
+	System.out.println(t1.toString());//¥Ú”°Practice30@1db9742
+	}
+}

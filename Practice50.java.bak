@@ -1,0 +1,44 @@
+//用FileInputStream和加缓存的BufferedInputStream来读取文件
+import java.io.*;
+import java.util.*;
+public class Practice50
+{
+	public static void main(String[] args) 
+	{
+		
+		InputStream f;
+		int ch;
+		long i=0;
+		System.out.println("Start");
+		Date start = new Date();
+		/*
+		try{
+			f = new FileInputStream("io_example/test.txt");
+			while((ch=f.read()) != -1){
+				i++;
+			}
+			f.close();
+		}
+		catch (IOException e){
+			e.printStackTrace();
+		}*/
+		try{
+			f = new BufferedInputStream(new ObjectInputStream("io_example/test.txt"));
+			while((ch = f.read()) != -1){
+				i++;
+			}
+			f.close();
+		}
+		catch(IOException e){
+			e.printStackTrace();
+		} 
+
+		Date end = new Date();
+		long elapsedTime = end.getTime() - start.getTime();
+		System.out.println("end");
+		System.out.println("read" + i + "bytes");
+		System.out.println("use" + elapsedTime);
+		//FileInputStream读取速度：use2
+		//BufferedInputStream读取速度：use0！！！太快了8
+	}
+}
